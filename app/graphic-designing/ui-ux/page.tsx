@@ -3,7 +3,7 @@
 import ContactUs from '@/components/contactus';
 import Header from './components/Header';
 import Footer from '@/components/Footer';
-import Socialdesign from './components/social-designing';
+import Uidesign from './components/ui-designing';
 
 
 export default function Logodesigning() {
@@ -15,7 +15,7 @@ export default function Logodesigning() {
         <Header/>
       
 
-      <Socialdesign/>
+      <Uidesign/>
 
     </main>
     <ContactUs/>

@@ -2,12 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import CustomDialog from "@/components/CustomDialog";
-import { Button } from "@/shadcn-ui/components/ui/button";
 import Image from "next/image";
 
 type Props = {};
 
-export default function Socialdesign({ }) {
+export default function Uidesign({ }) {
   return (
     <motion.div
       initial={{

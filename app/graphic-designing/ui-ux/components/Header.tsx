@@ -2,13 +2,13 @@
 
 import React, { useRef, useContext, useState, useCallback } from "react";
 import Image from "next/image";
-// import { ScrollContext } from "../../../../utils/scroll-oberver";
+import { ScrollContext } from "../../../../utils/scroll-oberver";
 
 
 const Header: React.FC = () => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const refContainer = useRef<HTMLDivElement>(null);
-  // const { scrollY } = useContext(ScrollContext);
+  const { scrollY } = useContext(ScrollContext);
 
   let progress = 0;
 
