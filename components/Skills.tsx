@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
               opacity: opacityForBlock(progress, 0),
             }}
           >
-            Hi, I'm Mohammed Isa
+            Hi, I&apos;m Mohammed Isa
           </div>
           <span
             className={`${s.skillText} inline-block after:content-[&#x27;_&#x27;]`}

@@ -115,7 +115,7 @@ export default function Socialdesign({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-              I'll craft compelling and shareable social media content that resonates with your audience.
+              I&apos;ll craft compelling and shareable social media content that resonates with your audience.
             </motion.p>
             <CustomDialog buttonLabel="Get in Touch" buttonClassName="text-2xl lg:!text-3xl font-bold px-8 mt-10 w-auto h-auto" />
             </div>
@@ -159,7 +159,7 @@ export default function Socialdesign({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-             I'll maintain a consistent brand identity across all your social media platforms, ensuring your brand is recognized and remembered.
+             I&apos;ll maintain a consistent brand identity across all your social media platforms, ensuring your brand is recognized and remembered.
             </motion.p>
             <CustomDialog buttonLabel="Get in Touch" buttonClassName="text-2xl lg:!text-3xl font-bold px-8 mt-10 w-auto h-auto" />
             </div>
@@ -172,7 +172,7 @@ export default function Socialdesign({ }) {
         <p className="leading-tight max-w-5xl mx-auto text-4xl lg:text-4xl tracking-tight">
           <strong>Types of Social Media Posts I Create:</strong> <br />
           <br />- <b>Image Posts</b>: Share visually captivating images that showcase your products, services, or brand story. <br />
-          <br />- <b>Video Posts</b>: Engage your audience with dynamic and informative videos that highlight your brand's unique offerings. <br />
+          <br />- <b>Video Posts</b>: Engage your audience with dynamic and informative videos that highlight your brand&apos;s unique offerings. <br />
           <br />- <b>Infographics</b>: Present complex information in an easily digestible and visually appealing format. <br />
           <br />- <b>Interactive Posts</b>: Encourage audience participation and engagement with interactive posts, such as quizzes, polls, and contests.
         </p>

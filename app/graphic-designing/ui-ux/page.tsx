@@ -6,20 +6,16 @@ import Footer from '@/components/Footer';
 import Uidesign from './components/ui-designing';
 
 
-export default function Logodesigning() {
+export default function Uidesigning() {
 
   return (
     <>
-    <main>
-      
-        <Header/>
-      
-
-      <Uidesign/>
-
-    </main>
-    <ContactUs/>
-      <Footer/>
+      <main>
+        <Header />
+        <Uidesign />
+      </main>
+      <ContactUs />
+      <Footer />
     </>
   )
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
 import CustomDialog from "@/components/CustomDialog";
 import Image from "next/image";
 
@@ -158,7 +157,7 @@ export default function Uidesign({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-A well-designed UI is crucial for your app's success. It can enhance user satisfaction, increase engagement, and drive positive reviews. With my expertise in UI design, I can transform your app idea into a reality that users love to use.
+A well-designed UI is crucial for your app&apos;s success. It can enhance user satisfaction, increase engagement, and drive positive reviews. With my expertise in UI design, I can transform your app idea into a reality that users love to use.
 </motion.p>
             
             </div>

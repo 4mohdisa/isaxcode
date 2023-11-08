@@ -282,7 +282,7 @@ export default function Materials({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-              Eye-catching LinkedIn profile covers that showcase your brand's personality.
+              Eye-catching LinkedIn profile covers that showcase your brand&apos;s personality.
             </motion.p>
             <CustomDialog buttonLabel="Get in Touch" buttonClassName="text-2xl lg:!text-3xl font-bold px-8 mt-10 w-auto h-auto" />
             </div>
@@ -345,7 +345,7 @@ export default function Materials({ }) {
               className="text-3xl lg:text-5xl mt-8 font-bold text-center text-white"
             >
               {" "}
-              Invest in Your Brand's Success</motion.h4>
+              Invest in Your Brand&apos;s Success</motion.h4>
             <motion.p
               initial={{
                 y: 50,
@@ -362,7 +362,7 @@ export default function Materials({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-             Premium branding materials are an investment in your business's reputation and success. They help establish your brand as a leader in your industry and attract new customers.
+             Premium branding materials are an investment in your business&apos;s reputation and success. They help establish your brand as a leader in your industry and attract new customers.
             </motion.p>
             
             </div>
