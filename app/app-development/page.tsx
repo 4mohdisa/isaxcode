@@ -1,27 +1,27 @@
 'use client';
 import { useEffect, useRef, useState } from 'react';
-import styles from './../.././styles/web-page.module.css'
+import styles from './../.././styles/app-page.module.css'
 import Image from 'next/image';
 import Lenis from '@studio-freight/lenis'
 import { useTransform, useScroll, motion, MotionValue } from 'framer-motion';
-import Header from './components/Header';
-import Footer from '././.././../components/Footer';
-import WebDev from './components/website-dev';
+import Footer from '@/components/Footer';
 import ContactUs from '@/components/contactus';
+import Header from './components/Header';
+import AppDev from './components/app-dev';
 
 const images = [
-  "1.jpg",
-  "2.jpg",
-  "3.jpg",
-  "4.jpg",
-  "5.jpg",
-  "6.jpg",
-  "7.jpg",
-  "8.jpg",
-  "9.jpg",
-  "10.jpg",
-  "11.jpg",
-  "12.jpg",
+  "app1.png",
+  "app2.png",
+  "app3.png",
+  "app4.png",
+  "app5.png",
+  "app6.png",
+  "app7.png",
+  "app8.png",
+  "app9.png",
+  "app10.png",
+  "app11.png",
+  "app12.png",
 ]
 
 interface ColumnProps {
@@ -29,7 +29,7 @@ interface ColumnProps {
   y: MotionValue<number> | string | number;  // Adjust the type based on your use case
 }
 
-export default function Websitedevelopment() {
+export default function Appdevelopment() {
   
   const gallery = useRef(null);
   const [dimension, setDimension] = useState({width:0, height:0});
@@ -79,7 +79,7 @@ export default function Websitedevelopment() {
         <Column images={[images[9], images[10], images[11]]} y={y4}/>
       </div>
       {/* <div className={styles.spacer}></div> */}
-      <WebDev/>
+      <AppDev/>
 
     </main>
     <ContactUs/>
@@ -90,7 +90,6 @@ export default function Websitedevelopment() {
 
 const Column = ({images, y}: ColumnProps) => {
   return (
-    <>
     <motion.div 
       className={styles.column}
       style={{y}}
@@ -99,15 +98,15 @@ const Column = ({images, y}: ColumnProps) => {
         images.map( (src: any, i: any) => {
           return <div key={i} className={styles.imageContainer}>
             <Image 
-              src={`/images/${src}`}
+              src={`/applications/${src}`}
               alt='image'
-              loading='lazy'
               fill
+              style={{objectFit:"contain"}}
+              loading="lazy"
             />
           </div>
         })
       }
     </motion.div>
-    </>
   )
 }

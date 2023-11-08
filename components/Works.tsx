@@ -31,9 +31,11 @@ const Works = () => (
           <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
             <WorkLeft progress={progress}>
               <div className="text-5xl md:text-5xl lg:text-7xl font-bold tracking-loose">
-                <WorkLink href="https://www.storiapp.co/"><span>Graphic</span><span>Designing</span></WorkLink>
+                <WorkLink href="/graphic-designing"><span>Graphic</span><span>Designing</span></WorkLink>
               </div>
+              <Link href={"/graphic-designing"}>
               <Button className="text-4xl lg:!text-5xl font-bold px-8 mt-10 w-52 h-16">View</Button>
+              </Link>
             </WorkLeft>
             <WorkRight progress={progress}>
             <Image
@@ -84,9 +86,12 @@ const Works = () => (
           <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
             <WorkLeft progress={progress}>
               <div className="text-5xl md:text-5xl lg:text-7xl font-bold tracking-loose">
-                <WorkLink href="https://pinkpanda.io/"><span>App</span><span>Development</span></WorkLink>
+                <WorkLink href="/app-development"><span>App</span><span>Development</span></WorkLink>
               </div>
+              <Link href={"/app-development"}>
+
               <Button className="text-4xl lg:!text-5xl font-bold px-8 mt-10 w-52 h-16">View</Button>
+              </Link>
             </WorkLeft>
             <WorkRight progress={progress}>
             <div className="w-full max-w-md pt-10 lg:pt-0 px-10 md:px-0">
@@ -127,7 +132,7 @@ const Works = () => (
             <div className="text-5xl md:text-5xl lg:text-7xl font-bold tracking-loose">
                 <WorkLink href="https://pinkpanda.io/"><span>Copy</span><span>Writing</span></WorkLink>
               </div>
-              <Button className="text-4xl lg:!text-5xl font-bold px-8 mt-10 w-52 h-16">View</Button>
+              <Link href={"/copy-writing"}><Button className="text-4xl lg:!text-5xl font-bold px-8 mt-10 w-52 h-16">View</Button></Link>
             </WorkLeft>
             
             <WorkRight progress={progress}>
