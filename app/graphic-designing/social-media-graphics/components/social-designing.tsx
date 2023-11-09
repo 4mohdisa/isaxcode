@@ -75,11 +75,13 @@ export default function Socialdesign({ }) {
             </motion.p>
             <CustomDialog buttonLabel="Get in Touch" buttonClassName="text-2xl lg:!text-3xl font-bold px-8 mt-10 w-auto h-auto" />
             </div>
-            <Image alt="Logo Designing Work" loading="lazy" width={600} height={300} src={"/graphic-designs/Social-Media-Graphics-1.jpg"} />
+            <Image alt="Creative social media graphic designers, freelance social media post creators, eye-catching social media visual experts, engaging social media story designers, innovative social media banner specialists, skilled social media thumbnail creators, captivating social media profile picture designers
+" loading="lazy" width={600} height={300} src={"/graphic-designs/Social-Media-Graphics-1.jpg"} />
           </article>
           
           <article className="flex flex-col md:flex-row text-left items-center justify-evenlymx-auto space-x-10" itemScope itemType="https://schema.org/Article">
-          <Image alt="Logo Designing Work" loading="lazy" width={600} height={300} src={"/graphic-designs/Social-Media-Graphics-2.jpg"} />
+          <Image alt="Talented reel editors, freelance reel editing services, expert reel cutting and splicing specialists, skilled reel lighting and framing professionals, effective reel sound design and mixing experts, creative reel transition and effects specialists, engaging reel music and soundtrack experts, knowledgeable reel optimization and exporting professionals
+" loading="lazy" width={600} height={300} src={"/graphic-designs/Social-Media-Graphics-2.jpg"} />
             <div className="flex flex-col text-left items-start justify-between">
             <motion.h4
               initial={{
@@ -122,7 +124,8 @@ export default function Socialdesign({ }) {
 
           </article>
           <article className="flex md:pt-10 flex-col text-left items-center justify-evenlymx-auto space-y-10" itemScope itemType="https://schema.org/Article">
-          <Image alt="Logo Designing Work" loading="lazy" width={1000} height={600} src={"/graphic-designs/Social-Media-Graphics-3.png"} />
+          <Image alt="Social media graphic design experts, freelance social media graphics creation services, social media visual specialists, social media story design professionals, social media banner creation experts, social media thumbnail design consultants, social media profile picture design specialists
+" loading="lazy" width={1000} height={600} src={"/graphic-designs/Social-Media-Graphics-3.png"} />
             <div className="flex flex-col text-left items-start justify-between">
             <motion.h4
               initial={{

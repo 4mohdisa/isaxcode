@@ -36,7 +36,8 @@ const Header: React.FC = () => {
           src="/assets/logo.svg"
           width={128 / 2}
           height={114 / 2}
-          alt="logo"
+          loading="lazy"
+          alt="Visual communication, graphic design services, logo design, branding, packaging design, illustration, web design, UI/UX design, motion graphics, photo editing, digital marketing, social media marketing, freelance graphic design, cheap freelance web design, affordable freelance copywriting, freelance website development, freelance digital marketing, freelance social media marketing, freelance content marketing, freelance SEO copywriting, freelance web copywriting, freelance social media copywriting, freelance email copywriting, freelance advertising copywriting, freelance creative copywriting, freelance technical copywriting, freelance business copywriting, freelance legal copywriting, freelance medical copywriting,"
         />
       </div>
       <div className="pt-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex flex-1 items-center justify-center flex-col">

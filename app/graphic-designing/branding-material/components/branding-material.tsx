@@ -75,7 +75,7 @@ export default function Materials({ }) {
             </motion.p>
             <CustomDialog buttonLabel="Get in Touch" buttonClassName="text-2xl lg:!text-3xl font-bold px-8 mt-10 w-auto h-auto" />
             </div>
-            <Image alt="Logo Designing Work" loading="lazy" width={600} height={300} src={"/graphic-designs/Branding-Material-1.jpg"} />
+            <Image alt="Logo Designing Work | Logo design, logo creation, brand identity design, visual branding, graphic logo, logo design services, custom logo design, freelance logo design, cheap freelance logo design, affordable freelance logo design, logo design for small businesses, logo design for startups, logo design for businesses, custom logo design, professional logo design, logo design for non-profits, logo design for organizations, logo design for websites, logo design for apps, logo design for print, logo design for social media, logo design for branding" loading="lazy" width={600} height={300} src={"/graphic-designs/Branding-Material-1.jpg"} />
           </article>
           <article className="flex md:pt-10 flex-col text-left items-center justify-evenlymx-auto space-y-10" itemScope itemType="https://schema.org/Article">
             <div className="flex flex-col text-center items-center justify-between">
@@ -120,7 +120,7 @@ export default function Materials({ }) {
             
           </article>
           <article className="flex flex-col md:flex-row text-left items-center justify-evenlymx-auto space-x-10" itemScope itemType="https://schema.org/Article">
-          <Image alt="Logo Designing Work" loading="lazy" width={600} height={300} src={"/graphic-designs/Branding-Material-2.jpg"} />
+          <Image  alt="Graphic design, branding, brand identity, visual communication, brand guidelines, style guides, brand standards, brand manual, corporate identity, business branding, logo design, typography, color palette, design elements, brand positioning, brand messaging, brand strategy, brand personality, brand voice, brand experience, brand storytelling, brand awareness, brand equity, brand reputation, brand loyalty, brand advocacy, brand ambassador, brand management, brand marketing, brand development, brand revitalization, brand rebranding, brand expansion, brand extension, brand protection, brand licensing, brand franchising, brand architecture, brand portfolio, brand strategy, brand management" loading="lazy" width={600} height={300} src={"/graphic-designs/Branding-Material-2.jpg"} />
             <div className="flex flex-col text-left items-start justify-between">
             <motion.h4
               initial={{
@@ -203,7 +203,7 @@ export default function Materials({ }) {
             </motion.p>
             <CustomDialog buttonLabel="Get in Touch" buttonClassName="text-2xl lg:!text-3xl font-bold px-8 mt-10 w-auto h-auto" />
             </div>
-            <Image alt="Logo Designing Work" loading="lazy" width={600} height={300} src={"/graphic-designs/Logo-3.jpg"} />
+            <Image alt="Visual communication, graphic design services, logo design, branding, packaging design, illustration, web design, UI/UX design, motion graphics, photo editing, digital marketing, social media marketing, freelance graphic design, cheap freelance web design, affordable freelance copywriting, freelance website development, freelance digital marketing, freelance social media marketing, freelance content marketing, freelance SEO copywriting, freelance web copywriting, freelance social media copywriting, freelance email copywriting, freelance advertising copywriting, freelance creative copywriting, freelance technical copywriting, freelance business copywriting, freelance legal copywriting, freelance medical copywriting" loading="lazy" width={600} height={300} src={"/graphic-designs/Logo-3.jpg"} />
           </article>
           <article className="flex flex-col text-left items-start justify-center space-y-10" itemScope itemType="https://schema.org/Article">
             <div className="flex flex-col text-left items-start justify-between">
@@ -328,7 +328,9 @@ export default function Materials({ }) {
           </article>
           <article className="flex md:pt-10 flex-col text-left items-center justify-evenlymx-auto space-y-10" itemScope itemType="https://schema.org/Article">
             <div className="flex flex-col text-center items-center justify-between">
-            <Image alt="Logo Designing Work" loading="lazy" width={600} height={300} src={"/graphic-designs/Branding-Material-3.jpg"} />
+            <Image alt="Logo design, logo creation, brand identity design, visual branding, graphic logo, logo design services, custom logo design, freelance logo design, cheap freelance logo design, affordable freelance logo design, logo design for small businesses, logo design for startups, logo design for businesses, custom logo design, professional logo design, logo design for non-profits, logo design for organizations, logo design for websites, logo design for apps, logo design for print, logo design for social media, logo design for branding.
+
+" loading="lazy" width={600} height={300} src={"/graphic-designs/Branding-Material-3.jpg"} />
             <motion.h4
               initial={{
                 y: 50,

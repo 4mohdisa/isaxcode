@@ -100,9 +100,10 @@ const Column = ({images, y}: ColumnProps) => {
           return <div key={i} className={styles.imageContainer}>
             <Image 
               src={`/images/${src}`}
-              alt='image'
+              alt='Web design, web development, web hosting, e-commerce development, mobile app development, software development, WordPress development, Shopify development, SEO, SEM, PPC, social media marketing, freelance website development, freelance graphic design, cheap freelance web design, affordable freelance copywriting, freelance digital marketing, freelance social media marketing, freelance content marketing, freelance SEO copywriting, freelance web copywriting, freelance social media copywriting, freelance email copywriting, freelance advertising copywriting, freelance creative copywriting, freelance technical copywriting, freelance business copywriting, freelance legal copywriting, freelance medical copywriting, Visual design, graphic design, web design, UI/UX design, user interface design, user experience design, web design services, web development services, website design, website development, web design agency, web development agency, web design studio, web development studio, web design company, web development company, custom web design, custom web development, website design for small businesses, website design for startups, website design for businesses, responsive web design, mobile web design, e-commerce web design, wordpress web design, shopify web design, seo web design, sem web design, ppc web design, website design for social media, website design for branding, website design for marketing, website design for advertising, website design for lead generation, website design for sales, website design for customer engagement, website design for brand awareness, website design for brand loyalty, website design for customer satisfaction'
               loading='lazy'
               fill
+              
             />
           </div>
         })

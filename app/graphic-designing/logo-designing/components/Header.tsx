@@ -48,6 +48,7 @@ const Header: React.FC = () => {
           width={128 / 2}
           height={114 / 2}
           alt="logo"
+          loading="lazy"
         />
       </div>
       <div className="p-12 font-bold   z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex flex-1 items-center justify-center flex-col">
@@ -63,6 +64,7 @@ const Header: React.FC = () => {
           width={188 / 3}
           height={105 / 3}
           alt="scroll down"
+          loading="lazy"
           onLoad={handleImageLoaded}
         />
       </div>

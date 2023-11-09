@@ -46,7 +46,8 @@ const Works = () => (
                   src="/graphic-designs/Logo-Designing-1.jpg"
                   width={900}
                   height={40}
-                  alt="Stori"
+                  loading="lazy"
+                  alt="Logo design, logo creation, brand identity design, visual branding, graphic logo, logo design services, custom logo design, freelance logo design, cheap freelance logo design, affordable freelance logo design, logo design for small businesses, logo design for startups, logo design for businesses, custom logo design, professional logo design, logo design for non-profits, logo design for organizations, logo design for websites, logo design for apps, logo design for print, logo design for social media, logo design for branding                  "
                   style={{objectFit:"contain", width: "auto"}}
                 />  
             </WorkRight>
@@ -74,7 +75,9 @@ const Works = () => (
                   src="/graphic-designs/Branding-Material-1.jpg"
                   width={900}
                   height={40}
-                  alt="Stori"
+                  alt="Graphic design, branding, brand identity, visual communication, brand guidelines, style guides, brand standards, brand manual, corporate identity, business branding, logo design, typography, color palette, design elements, brand positioning, brand messaging, brand strategy, brand personality, brand voice, brand experience, brand storytelling, brand awareness, brand equity, brand reputation, brand loyalty, brand advocacy, brand ambassador, brand management, brand marketing, brand development, brand revitalization, brand rebranding, brand expansion, brand extension, brand protection, brand licensing, brand franchising, brand architecture, brand portfolio, brand strategy, brand management.
+                  loafin"
+                  loading="lazy"
                   style={{objectFit:"contain"}}
                 />  
             </WorkRight>
@@ -101,7 +104,8 @@ const Works = () => (
                   src="/graphic-designs/Poster-Design-1.jpg"
                   width={900}
                   height={40}
-                  alt="Stori"
+                  loading="lazy"
+                  alt="Poster design, graphic design, visual communication, marketing, advertising, typography, layout, colors, images, illustrations, photo editing, creative concept, targeted audience, visual hierarchy, eye-catching visuals, call to action, branding, messaging, print design, digital design, social media, storytelling, engagement, impact, promotional posters, informative posters, educational posters, event posters, product posters, brand awareness posters, artistic posters, retro posters, vintage posters, minimalist posters, modern posters, conceptual posters"
                   style={{objectFit:"contain"}}
                 />  
             </WorkRight>
@@ -129,7 +133,8 @@ const Works = () => (
                   src="/graphic-designs/Social-Media-Graphics-1.jpg"
                   width={900}
                   height={40}
-                  alt="Stori"
+                  loading="lazy"
+                  alt="Social media graphics, social media design, social media marketing, social media content, visual content creation, social media management, social media strategy, social media engagement, social media advertising, social media analytics, social media platforms, social media trends, social media best practices, social media marketing tools, Graphic design, visual communication, typography, layout, colors, images, illustrations, photo editing, creative concept, branding, storytelling, graphic design software, graphic design tools, graphic design resources, graphic design inspiration, graphic design trends, graphic design tips, graphic design tutorials, graphic design critiques, graphic design communities, Video editing, motion graphics, video production, video marketing, social media video, reels, instagram reels, tiktok reels, short-form video, vertical video, mobile video, video storytelling, video engagement, video advertising, video analytics, video editing software, video editing tools, video editing resources, video editing inspiration, video editing trends, video editing tips, video editing tutorials, video editing critiques, video editing communities"
                   style={{objectFit:"contain"}}
                 />  
             </WorkRight>
@@ -156,7 +161,8 @@ const Works = () => (
                   src="/graphic-designs/UI-UX-Design-1.jpg"
                   width={900}
                   height={40}
-                  alt="Stori"
+                  alt="User experience (UX) design, user interface (UI) design, information architecture (IA), user research, wireframing, prototyping, usability testing, visual design, interaction design, user-centered design, human-centered design, design thinking, empathy, iteration, accessibility, inclusivity, mobile design, responsive design, cross-platform design, design systems, design patterns, design guidelines, design language"
+                  loading="lazy"
                   style={{objectFit:"contain"}}
                 />  
             </WorkRight>

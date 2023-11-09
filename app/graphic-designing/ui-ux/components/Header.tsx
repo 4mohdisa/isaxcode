@@ -35,7 +35,7 @@ const Header: React.FC = () => {
       loading="lazy"
       height={7000}
       objectFit="cover"
-      alt="logo"
+      alt="Visual communication, graphic design services, logo design, branding, packaging design, illustration, web design, UI/UX design, motion graphics, photo editing, digital marketing, social media marketing, content marketing, SEO copywriting, web copywriting, social media copywriting, email copywriting, advertising copywriting, creative copywriting, technical copywriting, business copywriting, legal copywriting, medical copywriting, web design, web development, web hosting, e-commerce development, mobile app development, software development, WordPress development, Shopify development, SEO, SEM, PPC, social media marketing"
       />
       <div
         className={`flex-grow-0 pt-10 transition-opacity duration-1000 
@@ -47,7 +47,8 @@ const Header: React.FC = () => {
           src="/assets/logo.svg"
           width={128 / 2}
           height={114 / 2}
-          alt="logo"
+          loading="lazy"
+          alt="Visual communication, graphic design services, logo design, branding, packaging design, illustration, web design, UI/UX design, motion graphics, photo editing, digital marketing, social media marketing, content marketing, SEO copywriting, web copywriting, social media copywriting, email copywriting, advertising copywriting, creative copywriting, technical copywriting, business copywriting, legal copywriting, medical copywriting, web design, web development, web hosting, e-commerce development, mobile app development, software development, WordPress development, Shopify development, SEO, SEM, PPC, social media marketing"
         />
       </div>
       <div className="p-12 font-bold   z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex flex-1 items-center justify-center flex-col">
@@ -63,6 +64,7 @@ const Header: React.FC = () => {
           width={188 / 3}
           height={105 / 3}
           alt="scroll down"
+          loading="lazy"
           onLoad={handleImageLoaded}
         />
       </div>

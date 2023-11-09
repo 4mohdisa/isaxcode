@@ -227,8 +227,7 @@ export default function WebDev({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-              I am Creative Director and UI/UX Developer from Adelaide, South
-              Australia, working as a software engineer.
+              I can help you create a website that is easy to use, visually appealing, and equipped with all the features you need to run a successful online business.
             </motion.p>
             <Dialog>
               <DialogTrigger asChild>
@@ -296,8 +295,7 @@ export default function WebDev({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-              I am Creative Director and UI/UX Developer from Adelaide, South
-              Australia, working as a software engineer.
+              I can help you create a blog that is both visually appealing and easy to navigate, allowing you to express your individuality and attract a loyal following.
             </motion.p>
             <Dialog>
               <DialogTrigger asChild>
@@ -365,8 +363,7 @@ export default function WebDev({ }) {
               viewport={{ once: true }}
               className="text-2xl mt-5 text-white font-normal"
             >
-              I am Creative Director and UI/UX Developer from Adelaide, South
-              Australia, working as a software engineer.
+              I can help you create a portfolio that is both visually compelling and informative, effectively highlighting your unique strengths and capabilities.
             </motion.p>
             <Dialog>
               <DialogTrigger asChild>
