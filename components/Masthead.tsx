@@ -3,7 +3,6 @@
 import React, { useRef, useContext, useState, useCallback } from "react";
 import Image from "next/image";
 import { ScrollContext } from "../utils/scroll-oberver";
-import BackgroundCircles from "./BackgroundCircles";
 
 
 const Masthead: React.FC = () => {
@@ -40,7 +39,6 @@ const Masthead: React.FC = () => {
         <source src="/assets/masthead-bg.webm" type="video/webm; codecs=vp9" />
         <source src="/assets/masthead-bg.mp4" type="video/mp4" />
       </video>
-<BackgroundCircles />
       <div
         className={`flex-grow-0 pt-10 transition-opacity duration-1000 
       
