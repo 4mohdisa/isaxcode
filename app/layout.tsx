@@ -4,6 +4,7 @@ import "../styles/globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import ScrollObserver from "../utils/scroll-oberver";
 import SizeObserver from "../utils/size-observer";
+import GoogleAnalytics from './GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +22,12 @@ export default function RootLayout({
     <SizeObserver>
       <ScrollObserver>
         <html lang="en">
-          <body className={inter.className}>{children}
+          <body className={inter.className}>
+          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics ga_id= 
+            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
+            {children}
             <Analytics />
           </body>
         </html>
