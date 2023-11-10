@@ -5,7 +5,6 @@ import Header from './components/Header';
 import Copywrite from './components/copy-writing';
 import Footer from '@/components/Footer';
 
-
 export default function Copywriting() {
 
   return (

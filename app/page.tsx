@@ -1,8 +1,6 @@
 "use client";
 
-import type { NextPage } from "next";
-import Head from "next/head";
-import AboutUs from "../components/Aboutus";
+import type {Metadata, NextPage } from "next";
 import ContactUs from "../components/contactus";
 import Footer from "../components/Footer";
 import Masthead from "../components/Masthead";
@@ -13,20 +11,14 @@ import React from "react";
 
 const Home: NextPage = () => {
   return (
-    <div>
-      {/* <Head>
-        <title>isaxcode - Software Engineer</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head> */}
-
-      <Masthead />
-      {/* <AboutUs /> */}
+    <>
+      <Masthead /> 
       <Skills />
       <Works />
       <TrustedBy />
       <ContactUs />
       <Footer />
-    </div>
+    </>
   );
 };
 
