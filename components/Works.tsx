@@ -63,20 +63,16 @@ loading="lazy"
               <Link href="/website-development"><Button className="text-4xl lg:!text-5xl font-bold px-8 mt-10 w-52 h-16">View</Button></Link>
             </WorkLeft>
             <WorkRight progress={progress}>
-                <div className="w-full relative flex items-center justify-center">
-                <div className="absolute w-[400px] lg:w-full xl:w-full ">
-                  <video
-                    id="coinbase-video"
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    width="100%"
-                  >
-                    <source src="/assets/works/website-dev.mp4" type="video/mp4" />
-                  </video>
-                </div>
-                </div>
+            <Image
+                  src="/assets/works/web-design.png"
+                  width={840}
+                  height={1620}
+                  alt="Visual communication experts, freelance graphic design services, logo design specialists, branding consultants, packaging design artists, illustration experts, web design professionals, UI/UX design aficionados, motion graphics specialists, photo editing masters, digital marketing strategists, social media marketing gurus, custom logo design services, innovative logo redesign experts, logo branding specialists, creative logo creation experts, logo development professionals, logo concept pioneers, logo sketching artists, logo iteration masters, logo finalization experts, logo file providers, comprehensive logo guidelines creators, logo usage consultants, branding material design consultants, transformative branding services, brand identity design specialists, comprehensive brand guidelines creators, detailed brand style guide experts, brand voice specialists, impactful brand messaging experts, brand personality consultants, effective brand positioning experts, strategic brand development experts, brand consistency consultants, brand management gurus, brand awareness experts, brand equity enhancers, brand loyalty specialists, custom poster design experts, creative poster creation artists, innovative poster development professionals, conceptual poster design pioneers, skilled poster sketching artists, masterful poster iteration experts, finalization-ready poster specialists, professional poster printing consultants, effective poster distribution experts, strategic poster marketing consultants, impactful poster advertising specialists, talented freelancers, freelance graphic design specialists, skilled freelance copywriters, expert freelance logo designers, knowledgeable freelance branding consultants, creative freelance poster designers, proficient freelance website design and development experts, experienced freelance digital marketing strategists, savvy freelance social media marketing experts, engaging freelance content marketing specialists, effective freelance SEO copywriters, persuasive freelance web copywriters, creative freelance social media copywriters, compelling freelance email copywriters, impactful freelance advertising copywriters, innovative freelance creative copywriters, technical freelance copywriters, business-oriented freelance copywriters, legal freelance copywriters, medical freelance copywriters
+
+"
+loading="lazy"
+                  style={{objectFit:"cover"}}
+                />
            
             </WorkRight>
           </div>
