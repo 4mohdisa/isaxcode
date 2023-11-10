@@ -18,24 +18,6 @@ const ClientLogos: React.FC = () => {
           />
 
         </SliderItem>
-        {/* <SliderItem width={150}>
-          <Image
-            src="/assets/trustedby/reelpay.svg"
-            width={150}
-            height={50}
-            alt="Coinbase"
-            style={{objectFit:"contain"}}
-          />
-        </SliderItem> */}
-        {/* <SliderItem width={150}>
-          <Image
-            src="/assets/trustedby/reelstar.svg"
-            width={150}
-            height={50}
-            alt="Exodus"
-            style={{objectFit:"contain"}}
-          />
-        </SliderItem> */}
         <SliderItem width={150}>
           <Image
             src="/assets/trustedby/rpa360.svg"
@@ -164,15 +146,6 @@ const ClientLogos: React.FC = () => {
             style={{objectFit:"contain"}}
           />
         </SliderItem>
-        {/* <SliderItem width={150}>
-          <Image
-            src="/assets/trustedby/nexaconnect.svg"
-            width={150}
-            height={50}
-            alt="Steddy"
-            style={{objectFit:"contain"}}
-          />
-        </SliderItem> */}
         <SliderItem width={150}>
           <Image
             src="/assets/trustedby/vericent.svg"
