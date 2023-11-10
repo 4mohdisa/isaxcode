@@ -15,45 +15,6 @@ const ContactUs: React.FC = () => {
       </div>
       <h2 className="text-5xl font-bold">Let&#x27;s Talk</h2>
         </div>
-      {/* <form className="flex flex-col gap-4 mt-16 px-10 lg:mt-20 min-w-full lg:min-w-[600px]">
-        <input
-          type="text"
-          id="Name"
-          name="Name"
-          required
-          maxLength={128}
-          placeholder="Name"
-          className="bg-black text-white text-2xl  outline-none border-2 focus:border-white border-gray-500 rounded-3xl px-8 py-2 w-full h-14"
-          // value=""
-        />
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          maxLength={128}
-          placeholder="Email"
-          className="bg-black text-white text-2xl outline-none border-2 focus:border-white border-gray-500 rounded-3xl px-8 py-2 w-full h-14"
-          // value=""
-        />
-        <textarea
-          id="message"
-          name="message"
-          required
-          maxLength={1048576}
-          placeholder="Additional information"
-          className="bg-black text-white text-2xl outline-none border-2 focus:border-white border-gray-500 rounded-3xl px-8 py-6 min-h-[10em]"
-        ></textarea>
-        
-        <div className="text-center mt-10">
-          <button
-            type="submit"
-            className="bg-white hover:bg-white/90 text-3xl text-black rounded-full px-12 py-3 font-bold"
-          >
-            Submit
-          </button>
-        </div>
-      </form> */}
       <iframe
   src="https://api.leadconnectorhq.com/widget/form/D55owbh8ddaAnt44lCKN"
   style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}

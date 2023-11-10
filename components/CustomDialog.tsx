@@ -1,6 +1,7 @@
 import { Button } from '@/shadcn-ui/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/shadcn-ui/components/ui/dialog';
 import React from 'react';
+import Script from 'next/script'
 
 interface CustomDialogProps {
   buttonLabel: string;
@@ -17,9 +18,9 @@ const CustomDialog: React.FC<CustomDialogProps> = ({ buttonLabel, buttonClassNam
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px] min-h-[500px] overflow-y-hidden bg-black text-white pt-20">
       <iframe
+        
                   src="https://api.leadconnectorhq.com/widget/form/FPkOIy3TIQWJSi9Gf9f4"
                   style={{ width: "100%", height: "100%", border: "none", borderRadius: "0px" }}
-
                   id="inline-FPkOIy3TIQWJSi9Gf9f4"
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
@@ -35,7 +36,7 @@ const CustomDialog: React.FC<CustomDialogProps> = ({ buttonLabel, buttonClassNam
                   title="Contact Me - Dialog Form "
                 >
                 </iframe>
-                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                <Script src="https://link.msgsndr.com/js/form_embed.js"/>
       </DialogContent>
     </Dialog>
   );
