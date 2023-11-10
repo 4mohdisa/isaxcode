@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import ScrollObserver from "../utils/scroll-oberver";
 import SizeObserver from "../utils/size-observer";
-import GoogleAnalytics from './GoogleAnalytics';
+import Script from "next/script";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,10 +23,17 @@ export default function RootLayout({
       <ScrollObserver>
         <html lang="en">
           <body className={inter.className}>
-          {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-            <GoogleAnalytics ga_id= 
-            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-          ) : null}
+            {/* <!-- Google tag (gtag.js) --> */}
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH" />
+            <Script>
+              {`
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VTDSFE7JPH');
+  `}
+            </Script>
             {children}
             <Analytics />
           </body>
