@@ -28,17 +28,14 @@ const Masthead: React.FC = () => {
       className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-10 overflow-x-hidden bg-black"
       style={{ transform: `translateY(-${progress * 20}vh)` }}
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute w-full h-full object-cover opacity-[0.05]"
-      >
-        <source src="/assets/masthead-bg.m4v" type="video/mp4; codecs=hvc1" />
-        <source src="/assets/masthead-bg.webm" type="video/webm; codecs=vp9" />
-        <source src="/assets/masthead-bg.mp4" type="video/mp4" />
-      </video>
+      <Image
+      className="absolute w-full h-full object-cover -z-10 opacity-40"
+      alt="bg"
+      width={7000}
+      height={7000}
+      loading="lazy"
+      src="/assets/bg.png"
+      />
       <div
         className={`flex-grow-0 pt-10 transition-opacity duration-1000 
       
