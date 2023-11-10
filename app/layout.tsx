@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import "../styles/globals.css";
-import type { AppProps } from "next/app";
+import { Analytics } from '@vercel/analytics/react';
 import ScrollObserver from "../utils/scroll-oberver";
 import SizeObserver from "../utils/size-observer";
 
@@ -19,13 +19,14 @@ export default function RootLayout({
 }) {
   return (
     <SizeObserver>
-    <ScrollObserver>
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
-    </html>
-      {/* <Component {...pageProps} /> */}
-    </ScrollObserver>
-  </SizeObserver>
+      <ScrollObserver>
+        <html lang="en">
+          <body className={inter.className}>{children}
+            <Analytics />
+          </body>
+        </html>
+      </ScrollObserver>
+    </SizeObserver>
 
   )
 }
