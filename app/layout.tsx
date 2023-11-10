@@ -25,7 +25,7 @@ export default function RootLayout({
           <body className={inter.className}>
             {/* <!-- Google tag (gtag.js) --> */}
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH" />
-            <Script>
+            <Script id='google-analytics' strategy='afterInteractive'>
               {`
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
