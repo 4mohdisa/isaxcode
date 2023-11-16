@@ -26,7 +26,7 @@ export default function RootLayout({
           <body className={inter.className}>
             {/* <!-- Google tag (gtag.js) --> */}
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH" />
-            <Script id='google-analytics' strategy='afterInteractive'>
+            <Script id='google-analytics' strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
@@ -35,7 +35,7 @@ export default function RootLayout({
               `}
             </Script>
             {/* <!-- Hotjar Tracking Code for https://www.isaxcode.com/ --> */}
-            <Script id='hotjar-tracking' strategy='afterInteractive'>
+            <Script id='hotjar-tracking' strategy="lazyOnload">
               {`
                 (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
