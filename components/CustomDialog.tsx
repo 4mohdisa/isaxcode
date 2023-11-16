@@ -37,7 +37,7 @@ const CustomDialog: React.FC<CustomDialogProps> = ({ buttonLabel, buttonClassNam
                 >
                 </iframe>
                 
-                <Script src="https://link.msgsndr.com/js/form_embed.js"/>
+                <Script src="https://link.msgsndr.com/js/form_embed.js" strategy="lazyOnload"/>
       </DialogContent>
     </Dialog>
   );

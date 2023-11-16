@@ -35,7 +35,7 @@ const ContactUs: React.FC = () => {
       >
       </iframe>
       
-      <Script src="https://link.msgsndr.com/js/form_embed.js" />
+      <Script src="https://link.msgsndr.com/js/form_embed.js"  strategy="lazyOnload"/>
     </div>
   );
 };
