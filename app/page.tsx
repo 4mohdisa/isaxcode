@@ -1,12 +1,8 @@
 "use client";
 
 import type {Metadata, NextPage } from "next";
-// import ContactUs from "../components/contactus";
-// import Footer from "../components/Footer";
 import Masthead from "../components/Masthead";
 import Skills from "../components/Skills";
-// import TrustedBy from "../components/Trustedby";
-import Works from "../components/Works";
 import React from "react";
 import dynamic from "next/dynamic";
 
@@ -20,6 +16,10 @@ const ContactUs = dynamic(() => import('../components/contactus'), {
 })
 
 const Footer = dynamic(() => import('../components/Footer'), {
+  loading: () => <p>Loading...</p>,
+})
+
+const Works = dynamic(() => import('../components/Works'), {
   loading: () => <p>Loading...</p>,
 })
 

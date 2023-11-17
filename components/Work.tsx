@@ -1,12 +1,7 @@
+"use client";
+
 import React from "react";
 import Link from "next/link";
-
-// export const WorkContainer: React.FC = ({ children }) => {
-//   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen">
-//     {children}
-//   </div>;
-//   console.log(children);
-// };
 
 export const WorkBackground: React.FC = () => (
   <div className="grid grid-cols-1 lg:grid-cols-2 w-full min-h-screen sticky top-0">
@@ -45,9 +40,9 @@ export const WorkRight: React.FC<{
         transform: `translateY(${translateY}px)`,
       }}
     >
-      
-        {children}
-      
+
+      {children}
+
     </div>
   );
 };
@@ -59,13 +54,6 @@ interface LinkProps {
 
 export const WorkLink: React.FC<LinkProps> = ({ href, children }) => (
   <Link href={href} className="flex flex-col xl:flex-row gap-x-5 gap-y-1">
-    {/* <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="underline underline-offset-8 decoration-1"
-    > */}
-      {children}
-    {/* </a> */}
+    {children}
   </Link>
 );

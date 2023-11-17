@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from '@/shadcn-ui/components/ui/button';
 import { Dialog, DialogContent, DialogTrigger } from '@/shadcn-ui/components/ui/dialog';
 import React from 'react';

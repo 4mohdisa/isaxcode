@@ -9,16 +9,14 @@ export default function Copywriting() {
 
   return (
     <>
-    <main>
-      
-        <Header/>
-      
+      <main>
 
-      <Copywrite/>
+        <Header />
+        <Copywrite />
 
-    </main>
-    <ContactUs/>
-      <Footer/>
+      </main>
+      <ContactUs />
+      <Footer />
     </>
   )
 }

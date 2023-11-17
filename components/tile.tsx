@@ -37,7 +37,6 @@ export const TileWrapper: React.FC<WrapperProps> = ({
         Math.max(-screenH, scrollY - offsetTop) + halfH
       ) / clientHeight;
     currentPage = percentY * numOfPages;
-    //   progress = Math.min(numOfPages - 0.5, Math.max(0.5, percentY * numOfPages));
   }
 
   return (

@@ -1,7 +1,13 @@
-import React from "react";
-import CustomDialog from "@/components/CustomDialog";
+"use client";
 
-type Props = {};
+import React from "react";
+import dynamic from "next/dynamic";
+
+const CustomDialog = dynamic(() => import('@/components/CustomDialog'), {
+  loading: () => <p>Loading...</p>,
+})
+
+
 
 export default function Copywrite({ }) {
   return (

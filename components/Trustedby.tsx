@@ -1,6 +1,15 @@
+"use client";
+
 import React from "react";
-import ClientLogos from "./client-logos";
-import Testimonials from "./Testimonials";
+import dynamic from "next/dynamic";
+
+const ClientLogos = dynamic(() => import('./client-logos'), {
+  loading: () => <p>Loading...</p>,
+})
+
+const Testimonials = dynamic(() => import('./Testimonials'), {
+  loading: () => <p>Loading...</p>,
+})
 
 const TrustedBy: React.FC = () => {
   return (

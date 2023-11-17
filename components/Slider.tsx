@@ -22,7 +22,6 @@ const SliderContainer: React.FC<Props> = ({
   const refContainer = useRef<HTMLDivElement>(null);
   const refContent = useRef<HTMLDivElement>(null);
 
-  //   const enabled = innerWidth < contentWidth;
   const enabled = true;
 
   useAnimationFrame(
