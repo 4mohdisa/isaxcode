@@ -7,7 +7,6 @@ import { useTransform, useScroll, motion, MotionValue } from 'framer-motion';
 import Masthead from '@/components/Masthead';
 import Footer from '@/components/Footer';
 import ContactUs from '@/components/contactus';
-import Header from './components/Header';
 import Works from './components/Works';
 
 const images = [
@@ -65,7 +64,12 @@ export default function GraphicDesigning() {
   return (
     <>
     <div>
-        <Header/>
+    <Masthead 
+      backgroundImage="/assets/works/graphic.png"
+      headline="Graphic Designing"
+      subHeadline="Done right."
+      imageAltText="Visual communication, graphic design services, logo design, branding, packaging design, illustration, web design, UI/UX design, motion graphics, photo editing, digital marketing, social media marketing, content marketing, SEO copywriting, web copywriting, social media copywriting, email copywriting, advertising copywriting, creative copywriting, technical copywriting, business copywriting, legal copywriting, medical copywriting, web design, web development, web hosting, e-commerce development, mobile app development, software development, WordPress development, Shopify development, SEO, SEM, PPC, social media marketing"
+      /> 
         <Works/>
     </div>
     <ContactUs/>
