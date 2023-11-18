@@ -38,8 +38,8 @@ const Masthead: React.FC<MastheadProps> = ({ backgroundImage, headline, subHeadl
           <Image className="absolute w-full h-full object-cover -z-10 opacity-40"
              alt={imageAltText}
              src={backgroundImage}
-             layout="fill"
-             objectFit="cover"
+             fill
+             style={{objectFit:"cover"}}
              loading="lazy"
              />
       <div

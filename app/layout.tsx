@@ -25,7 +25,7 @@ export default function RootLayout({
         <html lang="en">
           <body className={inter.className}>
             {/* <!-- Google tag (gtag.js) --> */}
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH" />
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH"  strategy="lazyOnload"/>
             <Script id='google-analytics' strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
