@@ -103,7 +103,7 @@ const ClientLogos: React.FC = () => {
         </SliderItem>
         <SliderItem width={150}>
           <Image
-            src="/assets/trustedby/arktic.png"
+            src="/assets/trustedby/Arktic.png"
             width={150}
             height={50}
             loading="lazy"
