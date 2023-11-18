@@ -35,7 +35,7 @@ export default function RootLayout({
               `}
             </Script>
             {/* <!-- Hotjar Tracking Code for https://www.isaxcode.com/ --> */}
-            <Script id='hotjar-tracking' strategy="lazyOnload">
+            {/* <Script id='hotjar-tracking' strategy="lazyOnload">
               {`
                 (function(h,o,t,j,a,r){
                 h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -46,7 +46,7 @@ export default function RootLayout({
                 a.appendChild(r);
                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
               `}
-            </Script>
+            </Script> */}
             {children}
             <Analytics />
           </body>
