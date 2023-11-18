@@ -1,12 +1,10 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import "../styles/globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import ScrollObserver from "../utils/scroll-oberver";
 import SizeObserver from "../utils/size-observer";
 import Script from "next/script";
 
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'isaxcode',
@@ -23,7 +21,7 @@ export default function RootLayout({
     <SizeObserver>
       <ScrollObserver>
         <html lang="en">
-          <body className={inter.className}>
+          <body>
             {/* <!-- Google tag (gtag.js) --> */}
             <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH"  strategy="lazyOnload"/>
             <Script id='google-analytics' strategy="lazyOnload">
