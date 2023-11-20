@@ -19,7 +19,7 @@ const BlogPostsPage = () => {
       {blogPosts.map((post) => (
         <div key={post.id} className="mb-8">
           <h1>{post.id}</h1>
-          <Link href={`/blog/post/${post.slug}/`}>
+          <Link href={`/blog/${post.slug}/`}>
             <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
           </Link>
           {post.featuredImage && (

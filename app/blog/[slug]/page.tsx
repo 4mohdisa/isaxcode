@@ -2,7 +2,7 @@
 
 import { useSearchParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
-import { BlogPost, fetchBlogPostBySlug } from '../../utils/fetchBlogPost';
+import { BlogPost, fetchBlogPostBySlug } from '../utils/fetchBlogPost';
 
 const SingleBlogPost = () => {
   const searchParams = useSearchParams();
