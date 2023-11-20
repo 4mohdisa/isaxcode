@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { slugify } from './slugify';
+
 
 // Updated interface to include the featured image URL
 export interface BlogPost {
@@ -22,7 +22,7 @@ export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
 
       return {
         id: post.id,
-        slug: slugify(post.title.rendered),
+        slug: post.slug,
         title: post.title.rendered,
         featuredImage,
       };
@@ -33,12 +33,16 @@ export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
   }
 }
 
-export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+  export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
+    console.log("Fetching post for slug:", slug);
     try {
-      const response = await axios.get(`https://wp.isaxcode.com/index.php?rest_route=/wp/v2/posts&slug=${slug}`);
+      const response = await axios.get(`https://wp.isaxcode.com/wp-json/wp/v2/posts?slug=${slug}`);
       const post = response.data[0]; // Assuming the API returns an array
   
       if (!post) return null;
+  
+      // Assuming the featured image URL is directly available or processed similarly
+      const featuredImage = post.featured_media ? 'URL to the featured image' : ''; 
   
       return {
         id: post.id,
@@ -46,7 +50,7 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
         title: post.title.rendered,
         content: post.content.rendered,
         publishedDate: post.date,
-        featuredImage: post.featuredImage,
+        featuredImage,
       };
     } catch (error) {
       console.error('Error fetching blog post by slug:', error);

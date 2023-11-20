@@ -18,7 +18,8 @@ const BlogPostsPage = () => {
     <div className="container mx-auto p-4">
       {blogPosts.map((post) => (
         <div key={post.id} className="mb-8">
-          <Link href={`/post/${post.slug}`}>
+          <h1>{post.id}</h1>
+          <Link href={`/blog/post/${post.slug}/`}>
             <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
           </Link>
           {post.featuredImage && (
