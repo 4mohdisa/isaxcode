@@ -10,7 +10,16 @@ export interface BlogPost {
   content: string;
   publishedDate: string;
 }
-
+export async function fetchAllBlogSlugs(): Promise<BlogPost[]> {
+  try {
+    const response = await axios.get('https://wp.isaxcode.com/index.php?rest_route=/wp/v2/posts');
+    const posts = response.data;
+    return posts.map((post: { slug: any; }) => post.slug); // Ensure post.slug is a string
+  } catch (error) {
+    console.error('Error fetching blog slugs:', error);
+    return [];
+  }
+}
 export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
   try {
     const response = await axios.get('https://wp.isaxcode.com/index.php?rest_route=/wp/v2/posts');
