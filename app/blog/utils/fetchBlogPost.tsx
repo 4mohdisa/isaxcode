@@ -10,6 +10,14 @@ export interface BlogPost {
   content: string;
   publishedDate: string;
 }
+
+function formatDate(publishedDate: string | number | Date) {
+  const options: Intl.DateTimeFormatOptions = { day: '2-digit', month: 'short', year: '2-digit' };
+  const date = new Date(publishedDate);
+  return date.toLocaleDateString('en-US', options);
+}
+
+
 export async function fetchAllBlogSlugs(): Promise<BlogPost[]> {
   try {
     const response = await axios.get('https://wp.isaxcode.com/index.php?rest_route=/wp/v2/posts');
@@ -33,6 +41,7 @@ export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
         id: post.id,
         slug: post.slug,
         title: post.title.rendered,
+        publishedDate: formatDate(post.date),
         featuredImage,
       };
     });
@@ -58,7 +67,7 @@ export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
         slug: post.slug,
         title: post.title.rendered,
         content: post.content.rendered,
-        publishedDate: post.date,
+        publishedDate: formatDate(post.date),
         featuredImage,
       };
     } catch (error) {
