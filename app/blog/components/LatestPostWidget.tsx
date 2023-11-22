@@ -49,13 +49,13 @@ const  LatestPostsWidget = () => {
           latestPosts.map((post) => (
             <div key={post.id} className="flex gap-4">
               <div className="w-28">
-                <Link href={`/blog-details/${post.slug}`}>
+                <Link href={`/blog/${post.slug}`}>
                   <Image width={400} height={200} objectFit='cover' src={post.featuredImage || 'default-placeholder-image-url'} alt="image" className="w-full h-20 rounded-md object-cover"/>
                 </Link>
               </div>
               <div>
                 <h6 className="text-white text-lg mb-1 hover:text-white/80">
-                  <Link href={`/blog-details/${post.slug}`}>{post.title}</Link>
+                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
                 </h6>
                 <Link href={`/blog/${post.slug}`} className="text-gray-400 text-sm">{post.publishedDate}</Link>
               </div>

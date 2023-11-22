@@ -20,7 +20,7 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, placeholder = 'Search H
           type="search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="flex-grow bg-transparent border border-white/20 rounded-l-md p-2.5 text-white placeholder-gray-400 outline-none focus:border-white/50"
+          className="w-full bg-transparent border border-white/20 rounded-l-md p-2.5 text-white placeholder-gray-400 outline-none focus:border-white/50"
           placeholder={placeholder}
         />
         <button type="submit" className="w-30 bg-white rounded-r-md p-2.5 text-black transition duration-500">
