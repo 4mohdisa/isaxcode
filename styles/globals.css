@@ -88,4 +88,13 @@ body{
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
+.blog-content-container img{
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
 
+.blog-content-container .blog-content li{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

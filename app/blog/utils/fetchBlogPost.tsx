@@ -9,6 +9,7 @@ export interface BlogPost {
   featuredImage: string;  // URL of the first image
   content: string;
   publishedDate: string;
+  
 }
 
 function formatDate(publishedDate: string | number | Date) {
@@ -75,3 +76,28 @@ export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
       return null;
     }
   }
+
+  export async function fetchPostsBySearchQuery(query: string): Promise<BlogPost[]> {
+    try {
+      const response = await axios.get(`https://wp.isaxcode.com/wp-json/wp/v2/posts?search=${query}`);
+      const posts = response.data;
+
+    return posts.map((post: any) => {
+      const imageMatch = post.content.rendered.match(/<img.*?src=["'](.*?)["']/); // Regex to find the first image
+      const featuredImage = imageMatch ? imageMatch[1] : ''; // Extract the image URL
+
+      return {
+        id: post.id,
+        slug: post.slug,
+        title: post.title.rendered,
+        publishedDate: formatDate(post.date),
+        featuredImage,
+      };
+    });
+    } catch (error) {
+      console.error('Error searching posts:', error);
+      return []; // Return an empty array in case of an error
+    }
+  }
+  
+  

@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { BlogPost } from './fetchBlogPost';
+import { formatDate } from './formatDate';
 
 // Define an interface for Category if you are using TypeScript
 export interface Category {
@@ -24,3 +26,28 @@ export async function fetchAllCategories(): Promise<Category[]> {
     return []; // Return an empty array in case of an error
   }
 }
+
+export async function fetchPostsByCategory(categoryId: number): Promise<BlogPost[]> {
+  try {
+    const response = await axios.get(`https://wp.isaxcode.com/wp-json/wp/v2/posts?categories=${categoryId}`);
+    const posts = response.data;
+
+    return posts.map((post: any) => {
+      const imageMatch = post.content.rendered.match(/<img.*?src=["'](.*?)["']/); // Regex to find the first image
+      const featuredImage = imageMatch ? imageMatch[1] : ''; // Extract the image URL
+
+      return {
+        id: post.id,
+        slug: post.slug,
+        title: post.title.rendered,
+        publishedDate: formatDate(post.date),
+        featuredImage,
+      };
+    });
+  } catch (error) {
+    console.error('Error fetching posts:', error);
+    return []; // Return an empty array in case of an error
+  }
+}
+
+
