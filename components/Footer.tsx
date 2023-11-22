@@ -21,6 +21,9 @@ const Footer: React.FC = () => {
       <Link href="https://www.etsy.com/au/shop/TechSolutionsHub?ref=l2-about-shopname" target="_blank" rel="noreferrer">
         Etsy
       </Link>
+      <Link href="/blog" rel="noreferrer">
+        Blog
+      </Link>
     </footer>
   );
 };
