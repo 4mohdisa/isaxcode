@@ -37,7 +37,7 @@ const  LatestPostsWidget = () => {
         {isLoading ? (
 
 [...Array(3)].map((_, index) => (
-<div className="flex items-center space-x-4">
+<div  key={index} className="flex items-center space-x-4">
       <Skeleton className="h-20 w-28 rounded-md" />
       <div className="space-y-2">
         <Skeleton className="h-4 w-[250px]" />

@@ -43,7 +43,8 @@ const LatestPostsCard = () => {
                     ))
                 ) : (
                     latestPosts.map((post) => (
-                        <Link href={`/blog/${post.slug}`} className="w-full lg:max-w-sm bg-black hover:bg-black/90 border-solid border-2 border-white/10 transition duration-500 ease-in-out rounded-md overflow-hidden">
+                        <Link key={post.id} href={`/blog/${post.slug}`} className="w-full lg:max-w-sm bg-black hover:bg-black/90 border-solid border-2 border-white/10 transition duration-500 ease-in-out rounded-md overflow-hidden">
+                        
                             <div className="relative">
                                 <Image width={400} height={200} objectFit='cover' className="w-full h-52 object-cover transition duration-500 ease-in-out transform hover:scale-105 !z-0" src={post.featuredImage} alt="" />
                             </div>
@@ -57,7 +58,6 @@ const LatestPostsCard = () => {
                                 <h4 className="text-white text-xl font-semibold mb-0">
                                     <a className="cursor-pointer" >{post.title}</a>
                                 </h4>
-
                             </div>
                         </Link>
                     ))
