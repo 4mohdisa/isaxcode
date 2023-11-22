@@ -22,6 +22,10 @@ module.exports = {
           protocol: 'https',
           hostname: 'images.unsplash.com'
         },
+        {
+          protocol: 'https',
+          hostname: 'wp.isaxcode.com'
+        }
       ],
     },
   }
