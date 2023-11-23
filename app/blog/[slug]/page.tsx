@@ -37,11 +37,11 @@ function BlogPost({ slug }: BlogPostProps) {
 
   return (
     <div className='bg-black flex items-center justify-center w-full py-20'>
-      <Link href="javascript:history.back()">
+      <Link href="javascript:history.back()" className='hidden lg:inline'>
       <Button className="fixed top-0 left-10 mt-10 w-auto h-auto !rounded-full !z-50 "><Image width={50} height={50} alt="back-icon" src="/assets/back.svg" /></Button>
       </Link>
       <div className='px-5 lg:px-0 w-full lg:w-[50%] blog-content-container text-white text-xl text-left flex flex-col items-center justify-center'>
-      <h1 className='text-white font-bold text-5xl  leading-snug'>{post.title}</h1>
+      <h1 className='text-white font-bold text-4xl lg:text-5xl  leading-snug'>{post.title}</h1>
       <div className='blog-content text-2xl' dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
     </div>
