@@ -103,10 +103,7 @@ body{
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.blog-content-container .blog-content h1, h2, h3, h4, h5, h6 a{
-  color: white;
-  text-decoration: underline;
-}
+
 .blog-content-container .blog-content h1, h2 {
   font-weight: 500;
 }
@@ -118,10 +115,10 @@ body{
   color: rgba(255, 255, 255, 0.80);
 }
 
-.blog-content-container .blog-content p, li, a{
+.blog-content-container .blog-content a{
   color: blue;
   text-decoration: none;
 }
-.blog-content-container .blog-content p, li, a:hover{
+.blog-content-container .blog-content a:hover{
   color: orange;
 }
