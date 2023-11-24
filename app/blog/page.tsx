@@ -81,9 +81,8 @@ const BlogPostsPage = () => {
             )}
           </div>
         </div>
-        {/* Sidebar */}
         <div className="hidden md:inline w-full sticky top-10 self-start">
-          <div className="space-y-9">
+          <div>
             <SearchBar onSearch={handleSearch} />
 
             <CategoriesComponent />

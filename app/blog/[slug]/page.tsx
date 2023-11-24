@@ -29,7 +29,7 @@ function BlogPost({ slug }: BlogPostProps) {
     <article className='bg-black flex items-center justify-center w-full py-20' itemScope itemType="https://schema.org/Article">
       <BackButton/>
       <div className='px-5 lg:px-0 w-full lg:w-[50%] blog-content-container text-white text-xl text-left flex flex-col items-center justify-center'>
-      <h1 className='text-white font-bold text-4xl lg:text-5xl  leading-snug'>{post.title}</h1>
+      <h1 className='text-white font-bold text-4xl lg:text-5xl  leading-normal'>{post.title}</h1>
       <div className='blog-content text-2xl' dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
     </article>
