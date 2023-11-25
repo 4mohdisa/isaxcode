@@ -29,7 +29,7 @@ const  LatestPostsWidget = () => {
     }, []);
   
     return (
-      <div className="single-widgets bg-cover bg-no-repeat border border-gray-800/10 p-8 rounded-md" style={{ backgroundImage: "url('../img/home-4/pricing-bg-3.png')" }}>
+      <div className="border-2 border-white/10 py-4 px-8 rounded-xl">
         <div className="widget-title mb-6 border-b border-gray-800/10">
           <h4 className="text-2xl font-medium text-white pb-1">Newest Posts</h4>
         </div>

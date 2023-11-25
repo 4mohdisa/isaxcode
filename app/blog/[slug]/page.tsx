@@ -3,10 +3,18 @@
 
 import React, { Suspense, useState, useEffect } from 'react';
 import { BlogPost, fetchBlogPostBySlug } from '../utils/fetchBlogPost'; // Adjust the path as necessary
-import Footer from '@/components/Footer';
-import LatestPostsCard from '../components/LatestBlogCard';
 import Loader from '@/components/Loader';
 import BackButton from '@/components/backButton';
+import { generateMetadata } from '../utils/metaData';
+import dynamic from "next/dynamic";
+
+const LatestPostsCard = dynamic(() => import('../components/LatestBlogCard'), {
+  loading: () => <p>Loading...</p>,
+})
+
+const Footer = dynamic(() => import('@/components/Footer'), {
+  loading: () => <p>Loading...</p>,
+})
 
 interface BlogPostProps {
   slug: string;
@@ -16,8 +24,24 @@ function BlogPost({ slug }: BlogPostProps) {
   const [post, setPost] = useState<BlogPost | null>(null);
 
   useEffect(() => {
-    fetchBlogPostBySlug(slug).then(setPost);
+    const fetchData = async () => {
+      const fetchedPost = await fetchBlogPostBySlug(slug);
+      setPost(fetchedPost);
+      if (fetchedPost) {
+        const metadata = await generateMetadata({ params: { slug: fetchedPost.slug } });
+        document.title = fetchedPost.title;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+          metaDescription.setAttribute('content', metadata.description);
+        }
+      }
+    };
+    fetchData();
   }, [slug]);
+
+  // useEffect(() => {
+  //   fetchBlogPostBySlug(slug).then(setPost);
+  // }, [slug]);
 
   if (!post) {
     return ( 

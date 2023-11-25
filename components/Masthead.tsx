@@ -8,41 +8,53 @@ import { ScrollContext } from "../utils/scroll-oberver";
 interface MastheadProps {
   backgroundImage: string;
   headline: string;
-  subHeadline: string;
+  subHeadline?: string; // Making subHeadline optional
   imageAltText: string;
+  arrow?: boolean; // Prop to control the visibility of the arrow, default to true
+  height?: 'Small' | 'Big'; // Height prop with 'Small' or 'Big' option
 }
 
-const Masthead: React.FC<MastheadProps> = ({ backgroundImage, headline, subHeadline, imageAltText }) => {
+const Masthead: React.FC<MastheadProps> = ({
+  backgroundImage,
+  headline,
+  subHeadline,
+  imageAltText,
+  arrow = true, // Default value is true
+  height = 'Big', // Default value is 'Big'
+}) => {
   const [imageLoaded, setImageLoaded] = useState(false);
   const refContainer = useRef<HTMLDivElement>(null);
   const { scrollY } = useContext(ScrollContext);
 
   let progress = 0;
-
   const { current: elContainer } = refContainer;
 
   if (elContainer) {
     progress = Math.min(1, scrollY / elContainer.clientHeight);
   }
 
-  const handleImageLoaded = useCallback(() => {
+  const handleImageLoaded = () => {
     setImageLoaded(true);
-  }, []);
+  };
+
+  // Determine the height class based on the height prop
+  const heightClass = height === 'Small' ? 'h-[40vh]' : 'h-screen';
 
   return (
     <div
       ref={refContainer}
-      className="min-h-screen flex flex-col items-center justify-center sticky top-0 -z-10 overflow-x-hidden bg-black"
+      className={`flex flex-col items-center justify-center sticky top-0 -z-10 overflow-x-hidden bg-black ${heightClass}`}
       style={{ transform: `translateY(-${progress * 20}vh)` }}
     >
-          <Image className="absolute w-full h-full object-cover -z-10 opacity-40"
-             alt={imageAltText}
-             src={backgroundImage}
-             fill
-             style={{objectFit:"cover"}}
-             loading="lazy"
-             />
-      <div
+      <Image
+        className="absolute w-full h-full object-cover -z-10 opacity-40"
+        alt={imageAltText}
+        src={backgroundImage}
+        layout="fill"
+        objectFit="cover"
+        loading="lazy"
+      />
+            <div
         className={`flex-grow-0 pt-10 transition-opacity duration-1000 
       
       ${imageLoaded ? "opacity-100" : "opacity-0"}
@@ -59,23 +71,26 @@ const Masthead: React.FC<MastheadProps> = ({ backgroundImage, headline, subHeadl
       </div>
       <div className="p-12 font-bold z-10 text-white drop-shadow-[0_5px_3px_rgba(0,0,0,0.4)] text-center flex flex-1 items-center justify-center flex-col">
       <h1 className="mb-6 text-4xl xl:text-5xl">{headline}</h1>
+      {subHeadline && (
         <h2 className="mb-2 text-2xl xl:text-3xl tracking-tight">
           <span>{subHeadline}</span>
         </h2>
+      )}
       </div>
-      <div
-        className={`flex-grow-0 pb-20 md:pb-10 transition-all duration-1000 ${imageLoaded ? "opacity-100" : "opacity-0 -translate-y-10"
-          }`}
-      >
-        <Image
-          src="/assets/arrow-down.webp"
-          width={188 / 3}
-          height={105 / 3}
-          alt="scroll down"
-          loading="lazy"
-          onLoad={handleImageLoaded}
-        />
-      </div>
+      {arrow && (
+        <div
+          className={`flex-grow-0 pb-20 md:pb-10 transition-all duration-1000 ${imageLoaded ? "opacity-100" : "opacity-0 -translate-y-10"}`}
+        >
+          <Image
+            src="/assets/arrow-down.webp"
+            width={188 / 3}
+            height={105 / 3}
+            alt="scroll down"
+            loading="lazy"
+            onLoad={handleImageLoaded}
+          />
+        </div>
+      )}
     </div>
   );
 };
