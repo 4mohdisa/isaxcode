@@ -11,6 +11,16 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ title, featuredImage, slug, publishedDate }: BlogCardProps) => {
+  // Function to truncate title
+  const truncateTitle = (title: string, maxWords: number) => {
+    const words = title.split(' ');
+    if (words.length > maxWords) {
+      return words.slice(0, maxWords).join(' ') + ' ...';
+    }
+    return title;
+  };
+
+  const truncatedTitle = truncateTitle(title, 8);
   return (
 
 
@@ -26,7 +36,7 @@ const BlogCard = ({ title, featuredImage, slug, publishedDate }: BlogCardProps) 
         
     </ul>
     <h4 className="group-hover:text-white text-white/90 text-xl font-semibold mb-0 cursor-pointer">
-        {title}
+    {truncatedTitle}
     </h4>
     
 </div>
