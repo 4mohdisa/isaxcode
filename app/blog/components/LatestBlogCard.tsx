@@ -6,6 +6,7 @@ import { fetchAllBlogPosts } from '../utils/fetchBlogPost';
 import { Skeleton } from '@/shadcn-ui/components/ui/skeleton';
 import SkeletonBlogCard from './BlogCardSkeleton';
 import BlogCard from './BlogCard';
+import { truncateText } from '../utils/textUtils';
 
 // Define a type for the props
 interface BlogCardProps {
@@ -30,6 +31,9 @@ const LatestPostsCard = () => {
         });
     }, []);
 
+    
+
+
     return (
         <div className="bg-black flex justify-center w-full">
             <div className='flex flex-col items-center px-5 lg:px-0 w-full md:w-[65%]'>
@@ -47,7 +51,7 @@ const LatestPostsCard = () => {
                  <BlogCard
                   key={post.id}
                   publishedDate={post.publishedDate}
-                  title={post.title}
+                  title={truncateText(post.title, 8)}
                   featuredImage={post.featuredImage}
                   slug={post.slug}
                   id={post.id}

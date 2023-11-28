@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { truncateText } from '../utils/textUtils';
 
 // Define a type for the props
 interface BlogCardProps {
@@ -11,16 +12,8 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ title, featuredImage, slug, publishedDate }: BlogCardProps) => {
-  // Function to truncate title
-  const truncateTitle = (title: string, maxWords: number) => {
-    const words = title.split(' ');
-    if (words.length > maxWords) {
-      return words.slice(0, maxWords).join(' ') + ' ...';
-    }
-    return title;
-  };
-
-  const truncatedTitle = truncateTitle(title, 8);
+  const truncatedTitle = truncateText(title, 8);
+  
   return (
 
 

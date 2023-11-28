@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { fetchAllBlogPosts } from '../utils/fetchBlogPost';
 import { Skeleton } from '@/shadcn-ui/components/ui/skeleton';
+import { truncateText } from '../utils/textUtils';
 
 // Define a type for the props
 interface BlogCardProps {
@@ -29,7 +30,7 @@ const  LatestPostsWidget = () => {
     }, []);
   
     return (
-      <div className="border-2 border-white/10 py-4 px-8 rounded-xl">
+      <div className="hidden xl:block lg:block border-2 border-white/10 py-4 px-8 rounded-xl">
         <div className="widget-title mb-6 border-b border-gray-800/10">
           <h4 className="text-2xl font-medium text-white pb-1">Newest Posts</h4>
         </div>
@@ -55,7 +56,7 @@ const  LatestPostsWidget = () => {
               </div>
               <div>
                 <h6 className="text-white text-lg mb-1 hover:text-white/80">
-                  <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+                  <Link href={`/blog/${post.slug}`}>{truncateText(post.title, 8)}</Link>
                 </h6>
                 <Link href={`/blog/${post.slug}`} className="text-gray-400 text-sm">{post.publishedDate}</Link>
               </div>
