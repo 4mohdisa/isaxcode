@@ -63,7 +63,7 @@ const BlogPostsPage = () => {
           <div className='md:hidden inline'>
           <SearchBar onSearch={handleSearch} />
           </div>
-          <div className="grid grid-cols-1 mt-10  md:grid-cols-2 xl:grid-cols-3 items-center justify-center gap-4 lg:gap-8 xl:gap-4 mx-auto">
+          <div className="grid grid-cols-1 mt-10  md:grid-cols-2 items-center justify-center gap-4 lg:gap-8 mx-auto">
           {isLoading ? (
                 Array.from({ length: 4 }).map((_, index) => (
                   <SkeletonBlogCard key={index} />
