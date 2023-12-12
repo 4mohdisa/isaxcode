@@ -56,7 +56,7 @@ const  LatestPostsWidget = () => {
               </div>
               <div>
                 <h6 className="text-white text-lg mb-1 hover:text-white/80">
-                  <Link href={`/blog/${post.slug}`}>{truncateText(post.title, 8)}</Link>
+                  <Link href={`/blog/${post.slug}`}>{truncateText(post.title, 6)}</Link>
                 </h6>
                 <Link href={`/blog/${post.slug}`} className="text-gray-400 text-sm">{post.publishedDate}</Link>
               </div>

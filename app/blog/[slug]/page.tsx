@@ -7,6 +7,7 @@ import Loader from '@/components/Loader';
 import BackButton from '@/components/backButton';
 import { generateMetadata } from '../utils/metaData';
 import dynamic from "next/dynamic";
+import Script from 'next/script';
 
 const LatestPostsCard = dynamic(() => import('../components/LatestBlogCard'), {
   loading: () => <p>Loading...</p>,

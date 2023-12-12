@@ -12,7 +12,7 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ title, featuredImage, slug, publishedDate }: BlogCardProps) => {
-  const truncatedTitle = truncateText(title, 8);
+  const truncatedTitle = truncateText(title, 7);
   
   return (
 

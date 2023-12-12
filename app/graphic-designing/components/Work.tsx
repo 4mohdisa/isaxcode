@@ -33,14 +33,14 @@ export const WorkRight: React.FC<{
   let translateY = Math.max(-50, -(progress - 0.5) * 50);
   return (
     <div
-      className="flex flex-1 lg:items-center justify-center h-screen"
+      className="flex flex-col pb-48 lg:pb-0 lg:flex-row lg:items-center justify-center h-screen"
       style={{
         transform: `translateY(${translateY}px)`,
       }}
     > 
         {children}
-      
     </div>
   );
 };
+
 
