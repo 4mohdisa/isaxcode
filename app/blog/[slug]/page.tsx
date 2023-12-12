@@ -7,7 +7,7 @@ import Loader from '@/components/Loader';
 import BackButton from '@/components/backButton';
 import { generateMetadata } from '../utils/metaData';
 import dynamic from "next/dynamic";
-import Script from 'next/script';
+import useDynamicScript from '../utils/useDynamicScript';
 
 const LatestPostsCard = dynamic(() => import('../components/LatestBlogCard'), {
   loading: () => <p>Loading...</p>,
@@ -40,9 +40,10 @@ function BlogPost({ slug }: BlogPostProps) {
     fetchData();
   }, [slug]);
 
-  // useEffect(() => {
-  //   fetchBlogPostBySlug(slug).then(setPost);
-  // }, [slug]);
+
+  useDynamicScript([
+    "https://platform.twitter.com/widgets.js",
+  ]);
 
   if (!post) {
     return ( 
@@ -54,7 +55,7 @@ function BlogPost({ slug }: BlogPostProps) {
     <article className='bg-black flex items-center justify-center w-full py-20' itemScope itemType="https://schema.org/Article">
       <BackButton/>
       <div className='px-5 lg:px-0 w-full lg:w-[50%] blog-content-container text-white text-xl text-left flex flex-col items-center justify-center'>
-      <h1 className='text-white font-bold text-4xl lg:text-5xl  leading-normal'>{post.title}</h1>
+      <h1 className='text-white font-bold  lg:text-5xl  leading-relaxed text-left w-full'>{post.title}</h1>
       <div className='blog-content text-2xl' dangerouslySetInnerHTML={{ __html: post.content }} />
       </div>
     </article>
