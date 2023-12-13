@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 
 "src="/assets/logo.svg" height={38} width={38} />
       <Link href="https://github.com/4mohdisa" target="_blank" rel="noreferrer">Github</Link>
-      <Link href="https://www.fiverr.com/xcodrr?up_rollout=true" target="_blank" rel="noreferrer">Fiverr</Link>
+      <Link href="https://www.fiverr.com/xcodrr" target="_blank" rel="noreferrer">Fiverr</Link>
       <Link href="https://www.upwork.com/freelancers/~016866133a6fd56dfe" target="_blank" rel="noreferrer">
         Upwork
       </Link>

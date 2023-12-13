@@ -126,3 +126,64 @@ body{
 .blog-content-container .blog-content a:hover{
   color: orange;
 }
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-end;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    min-height: 208px;
+}
+.card img {
+  object-fit: cover;
+  object-position: top;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card:after{
+  content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* box-shadow: inset 0 1px 0 1px hsla(0,0%,100%,.3); */
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,rgba(0,0,0,.7) 50%,#000 75%,#000);
+    border-radius: 8px;
+    transition: opacity .2s;
+}
+
+.card:hover:after {
+    opacity: 0.96;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none; /* Ensures the shadow doesn't interfere with interaction */
+  box-shadow: 
+      inset 0 1px 0px hsla(0,0%,100%),
+      inset -1px 0 0px hsla(0,0%,100%, 0.7),
+      inset 1px 0 0px hsla(0,0%,100%, 0.7);
+      clip-path: polygon(
+        0 0,    /* top left */
+        100% 0, /* top right */
+        100% 60%, /* 75% down right */
+        50% 60%, /* 75% down center */
+        50% 60%, /* 75% down center */
+        0 60%  /* 75% down left */
+    );
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+z-index: 1;
+}

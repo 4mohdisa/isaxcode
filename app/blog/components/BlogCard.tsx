@@ -19,7 +19,7 @@ const BlogCard = ({ title, featuredImage, slug, publishedDate }: BlogCardProps) 
 
 <Link href={`/blog/${slug}`} className="group w-full hover:shadow-lg hover:shadow-white/5 lg:max-w-sm bg-black hover:border-white/20 border-solid border-2 border-white/10 transition duration-500 ease-in-out rounded-md overflow-hidden">
 <div className="relative">
-    <Image width={400} height={200} objectFit='cover' className="w-full h-52 object-cover transition duration-500 ease-in-out transform group-hover:scale-105" src={featuredImage} alt="" />
+    <Image width={400} height={200} objectFit='cover' className="w-full h-52 object-cover transition duration-500 ease-in-out transform group-hover:scale-105" src={featuredImage} alt="Featured Blog Image" />
 </div>
 <div className="p-5">
     <ul className="flex items-center justify-between flex-wrap mb-3">

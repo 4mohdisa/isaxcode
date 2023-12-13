@@ -9,13 +9,8 @@ import dynamic from "next/dynamic";
 import useDynamicScript from '../utils/useDynamicScript';
 import Loader from '@/components/Loader';
 
-
-const LatestPostsCard = dynamic(() => import('../components/LatestBlogCard'), {
-  loading: () => <Loader/>,
-})
-
 const Footer = dynamic(() => import('@/components/Footer'), {
-  loading: () => <Loader/>,
+  loading: () => <p>Loading...</p>,
 })
 
 interface BlogPostProps {
@@ -75,7 +70,6 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   return (
     <Suspense fallback={<Loader/>}>
       <BlogPost slug={slug} />
-      <LatestPostsCard/>
       <Footer/>
     </Suspense>
   );
