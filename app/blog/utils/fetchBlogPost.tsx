@@ -31,7 +31,7 @@ export async function fetchAllBlogSlugs(): Promise<BlogPost[]> {
 }
 export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
   try {
-    const response = await axios.get('https://wp.isaxcode.com/index.php?rest_route=/wp/v2/posts/?per_page=100');
+    const response = await axios.get('https://wp.isaxcode.com/wp-json/wp/v2/posts/?per_page=100');
     const posts = response.data;
 
     return posts.map((post: any) => {
