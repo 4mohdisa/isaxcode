@@ -5,6 +5,7 @@ import Masthead from "../components/Masthead";
 import Skills from "../components/Skills";
 import React from "react";
 import dynamic from "next/dynamic";
+import About from "@/components/About";
 
 const TrustedBy = dynamic(() => import('../components/Trustedby'), {
   loading: () => <p>Loading...</p>,
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
       /> 
       <Skills />
       <Works />
+      <About/>
       <TrustedBy />
       <ContactUs />
       <Footer />

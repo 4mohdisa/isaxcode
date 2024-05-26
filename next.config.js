@@ -24,7 +24,7 @@ module.exports = {
         },
         {
           protocol: 'https',
-          hostname: 'wp.isaxcode.com'
+          hostname: 'next.isaxcode.com'
         }
       ],
     },

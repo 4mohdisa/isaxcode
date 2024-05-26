@@ -5,39 +5,45 @@ import { truncateText } from '../utils/textUtils';
 // Define a type for the props
 interface BlogCardProps {
   id: number;
-  title: string;
-  featuredImage: string;
   slug: string;
+  title: string;
+  featuredImage: string;  // URL of the first image
+  content: string;
   publishedDate: string;
+  excerpt: string;
+  categories: string[];
 }
 
-const BlogCard = ({ title, featuredImage, slug, publishedDate }: BlogCardProps) => {
+const BlogCard = ({ title, featuredImage, slug, publishedDate, categories }: BlogCardProps) => {
   const truncatedTitle = truncateText(title, 7);
-  
+  const cardHeight = 400; // Set the desired height of the card
+  const cardWidth = 300; // Set the desired width of the card
+
   return (
-
-
-<Link href={`/blog/${slug}`} className="group w-full hover:shadow-lg hover:shadow-white/5 lg:max-w-sm bg-black hover:border-white/20 border-solid border-2 border-white/10 transition duration-500 ease-in-out rounded-md overflow-hidden">
-<div className="relative">
-    <Image width={400} height={200} objectFit='cover' className="w-full h-52 object-cover transition duration-500 ease-in-out transform group-hover:scale-105" src={featuredImage} alt="Featured Blog Image" />
-</div>
-<div className="p-5">
-    <ul className="flex items-center justify-between flex-wrap mb-3">
-        <li>
-            <a className="text-gray-400 text-sm font-medium cursor-pointer" >{publishedDate}</a>
-        </li>
-        
-    </ul>
-    <h4 className="group-hover:text-white text-white/90 text-xl font-semibold mb-0 cursor-pointer">
-    {truncatedTitle}
-    </h4>
-    
-</div>
-</Link>
-
+    <Link href={`/blog/${slug}`} passHref>
+      <div className="group overflow-hidden rounded-lg" style={{ height: `${cardHeight}px`, width: `${cardWidth}px` }}>
+        <div className="relative h-full">
+          <Image
+            fill
+            sizes="100vw"
+            className="object-cover rounded-lg"
+            src={featuredImage}
+            alt={`Image for ${title}`}
+          />
+          <div className="absolute top-0 left-0 p-3">
+            <span className="text-white text-md font-medium">{categories}</span>
+            <span className="text-white text-md font-medium"> • </span>
+            <span className="text-white text-md font-medium">{publishedDate}</span>
+          </div>
+          <div className="absolute bottom-0 left-0 p-3">
+            <h4 className="text-white text-xl font-semibold mb-0">
+              {truncatedTitle}
+            </h4>
+          </div>
+        </div>
+      </div>
+    </Link>
   );
 };
 
 export default BlogCard;
-
-
