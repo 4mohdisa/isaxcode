@@ -16,10 +16,11 @@ const ContactUs: React.FC = () => {
         </div>
         <h2 className="text-5xl font-bold">Let&#x27;s Talk</h2>
       </div>
+
       <iframe
-        src="https://api.leadconnectorhq.com/widget/form/D55owbh8ddaAnt44lCKN"
-        style={{ width: "100%", height: "100%", border: "none", borderRadius: "3px" }}
-        id="inline-D55owbh8ddaAnt44lCKN"
+        src="https://api.leadconnectorhq.com/widget/form/8ZcFX3WgrTrkcClstvhD"
+        style={{ width: "100%", height: "100%", border: "none", borderRadius: "0px" }}
+        id="inline-8ZcFX3WgrTrkcClstvhD"
         data-layout="{'id':'INLINE'}"
         data-trigger-type="alwaysShow"
         data-trigger-value=""
@@ -27,15 +28,15 @@ const ContactUs: React.FC = () => {
         data-activation-value=""
         data-deactivation-type="neverDeactivate"
         data-deactivation-value=""
-        data-form-name="Form 0"
-        data-height="463"
-        data-layout-iframe-id="inline-D55owbh8ddaAnt44lCKN"
-        data-form-id="D55owbh8ddaAnt44lCKN"
-        title="Contact Me - Main Form"
+        data-form-name="INLINE"
+        data-height="400"
+        data-layout-iframe-id="inline-8ZcFX3WgrTrkcClstvhD"
+        data-form-id="8ZcFX3WgrTrkcClstvhD"
+        title="INLINE"
       >
       </iframe>
-      
-      <Script src="https://link.msgsndr.com/js/form_embed.js"  strategy="lazyOnload"/>
+
+      <Script src="https://link.msgsndr.com/js/form_embed.js" />
     </div>
   );
 };

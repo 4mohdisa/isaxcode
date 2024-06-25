@@ -194,6 +194,17 @@ export async function fetchAllBlogPosts(): Promise<BlogPost[]> {
   }
 }
 
+// Fetch a single author by URL
+export async function fetchAuthorByUrl(authorUrl: string): Promise<string> {
+  try {
+    const response = await axios.get(authorUrl);
+    return response.data.name;
+  } catch (error) {
+    console.error(`Error fetching author from ${authorUrl}:`, error);
+    throw new Error(`Failed to fetch author from ${authorUrl}`);
+  }
+}
+
 // Fetch blog post by slug
 export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null> {
   console.log("Fetching post for slug:", slug);
@@ -217,10 +228,9 @@ export async function fetchBlogPostBySlug(slug: string): Promise<BlogPost | null
     let author = '';
     if (post._links && post._links.author && post._links.author[0]) {
       const authorUrl = post._links.author[0].href;
-      console.log(authorUrl)
+      console.log(authorUrl);
       try {
-        const authorResponse = await axios.get(authorUrl);
-        author = authorResponse.data.name;
+        author = await fetchAuthorByUrl(authorUrl);
         console.log(`Fetched author for post ${post.id}: ${author}`);
       } catch (error) {
         console.error(`Error fetching author for post ${post.id}:`, error);
@@ -335,5 +345,22 @@ export async function fetchPostsBySearchQuery(query: string): Promise<BlogPost[]
   } catch (error) {
     console.error('Error searching posts:', error);
     throw new Error('Failed to search posts. Please try again later.');
+  }
+}
+
+// Fetch one latest blog post from each specified category
+export async function fetchLatestPostFromEachCategory(): Promise<BlogPost[]> {
+  const categoryIds = [23, 24, 17];
+  try {
+    const postsPromises = categoryIds.map(categoryId => fetchPostsByCategory(categoryId));
+    const postsByCategory = await Promise.all(postsPromises);
+
+    // Flatten the array of arrays and take the first post from each category
+    const latestPosts = postsByCategory.map(posts => posts[0]);
+
+    return latestPosts.filter(post => post !== undefined);
+  } catch (error) {
+    console.error('Error fetching latest posts from each category:', error);
+    return []; // Return an empty array in case of an error
   }
 }

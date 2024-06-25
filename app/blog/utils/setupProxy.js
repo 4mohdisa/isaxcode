@@ -1,4 +1,3 @@
-// src/setupProxy.js
 const { createProxyMiddleware } = require('http-proxy-middleware');
 
 module.exports = function(app) {
@@ -7,15 +6,10 @@ module.exports = function(app) {
     createProxyMiddleware({
       target: 'https://next.isaxcode.com',
       changeOrigin: true,
-      pathRewrite: {
-        '^/wp-json': '/wp-json', // remove base path
+      proxy: {
+        // Set the proxy to the target URL
+        path: '/wp-json',
       },
-      onProxyReq: (proxyReq, req, res) => {
-        proxyReq.setHeader('Access-Control-Allow-Origin', '*');
-      },
-      onProxyRes: (proxyRes, req, res) => {
-        proxyRes.headers['Access-Control-Allow-Origin'] = '*';
-      }
     })
   );
 };
