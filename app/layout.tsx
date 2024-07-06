@@ -4,6 +4,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import ScrollObserver from "../utils/scroll-oberver";
 import SizeObserver from "../utils/size-observer";
 import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 export const metadata = {
@@ -27,9 +28,25 @@ export default function RootLayout({
     <SizeObserver>
       <ScrollObserver>
         <html lang="en">
-          <body>
+          <head>
+            {/* <!-- Google Tag Manager --> */}
+            <Script
+              id="gtm"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{
+                __html: `
+              (function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-KDTNZCP2');
+              `
+              }}
+            ></Script>
+            {/* <!-- End Google Tag Manager --> */}
+
             {/* <!-- Google tag (gtag.js) --> */}
-            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH"  strategy="lazyOnload"/>
+            <Script async src="https://www.googletagmanager.com/gtag/js?id=G-VTDSFE7JPH" strategy="lazyOnload" />
             <Script id='google-analytics' strategy="lazyOnload">
               {`
                 window.dataLayer = window.dataLayer || [];
@@ -51,8 +68,11 @@ export default function RootLayout({
                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
               `}
             </Script>
+          </head>
+          <body>
+          <GoogleAnalytics gaId="G-VTDSFE7JPH"/>
             {children}
-            <Analytics />
+            <Analytics/>
             <SpeedInsights />
           </body>
         </html>

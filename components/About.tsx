@@ -21,18 +21,18 @@ export default function About({ }) {
           loading="lazy"
           alt="s"
           src="/assets/IMG.jpeg"
-          className="max-w-xs md:max-w-sm lg:max-w-lg xl:max-w-xl mx-auto h-auto object-cover rounded-2xl"
+          className="w-full lg:max-w-lg xl:max-w-xl mx-auto h-auto object-cover rounded-2xl"
         />
       </Link>
-      <div className="px-0 md:px-10 w-full md:w-2/4">
+      <div className="px-0 md:px-10 w-full md:w-2/4 flex flex-col items-start gap-10">
         <h4 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-white">
           Here is a little Background
         </h4>
-        <p className="text-md sm:text-lg text-gray-300 mt-4">
+        <p className="text-md sm:text-lg text-gray-300 mt-4 text-left">
           Adaptable student with knowledge of development, configuration management, and database. Aiming to leverage my abilities to successfully fill the vacancy on your team. Frequently praised for communication by my peers, I can be relied upon to help your team achieve its goals.
         </p>
         <Link href="/about">
-        <Button variant={"outline"}>view more</Button>
+        <Button variant={"outline"} size={"lg"}>view more</Button>
         </Link>
       </div>
     </div>

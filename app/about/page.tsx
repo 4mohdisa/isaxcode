@@ -11,16 +11,8 @@ export default function Websitedevelopment() {
 
 
     return (
-        <>
-
-
-            <Masthead backgroundImage="/assets/bg.png"
-                headline="Mohammed Isa"
-                subHeadline="Everything Done right."
-                imageAltText="Web design, web development" />
-
-<About/>
-            <ContactUs />
+        <> 
+            <About/>
             <Footer />
         </>
     )
