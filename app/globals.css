@@ -3,25 +3,43 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --text-color-white: #fff;
+  --text-color-black: #000;
+  --text-color-gray: #E5E7EB;
+  --background-color-white: #fff;
+  --background-color-black: #000;
 }
 
-@media (prefers-color-scheme: dark) {
+@layer components {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --text-color-white: #fff;
+    --text-color-black: #000;
+    --text-color-gray: #E5E7EB;
+    --background-color-white: #fff;
+    --background-color-black: #000;
+    --textlight: '#fff',
+  }
+  body {
+    @apply dark:bg-black bg-white;
+  }
+  .p-tag {
+    @apply sm:text-lg  mt-4 text-left;
+  }
+
+  .h-tag {
+    @apply text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold;
+  }
+
+  .section-headline {
+    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

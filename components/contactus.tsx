@@ -6,7 +6,7 @@ import Script from 'next/script'
 
 const ContactUs: React.FC = () => {
   return (
-    <div className="bg-black text-white flex flex-col justify-center pt-10 min-h-screen/2 w-full">
+    <div className="dark:bg-black bg-white flex flex-col justify-center pt-10 min-h-screen/2 w-full">
       <div className="flex flex-col items-center justify-center">
 
         <div className="pb-10">

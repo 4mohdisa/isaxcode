@@ -34,7 +34,7 @@ const Skills: React.FC = () => {
   }
 
   return (
-    <div ref={refContainer} className="bg-black text-white">
+    <div ref={refContainer} className="dark:bg-black bg-white">
       <div className="min-h-screen max-w-6xl mx-auto px-10 lg:px-16 py-24 md:py-28 lg:py-36 flex flex-col justify-center items-center text-6xl md:text-8xl lg:text-9xl tracking-tight font-bold">
         <div className="leading-[1.15] flex flex-col gap-y-10 md:gap-y-5 lg:gap-y-10">
           <div
