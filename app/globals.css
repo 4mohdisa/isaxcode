@@ -33,6 +33,10 @@
   .section-headline {
     @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold;
   }
+
+  .button {
+    @apply border text-2xl font-bold py-3 px-8 rounded;
+  }
 }
 
 .no-scrollbar::-webkit-scrollbar {

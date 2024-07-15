@@ -14,7 +14,7 @@ const Testimonials = dynamic(() => import('./Testimonials'), {
 const TrustedBy: React.FC = () => {
   return (
     <section
-      className={`dark:bg-black bg-white min-h-screen flex flex-col justify-center gap-16 md:gap-20 `}
+      className={`bg-black text-white min-h-screen flex flex-col justify-center gap-16 md:gap-20 `}
     >
       <div className="flex-1 bg-black"></div>
       

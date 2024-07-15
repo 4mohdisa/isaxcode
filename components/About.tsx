@@ -1,15 +1,20 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Playfair } from "@next/font/google";
 
+const playfair = Playfair({
+  subsets: ['latin-ext'],
+  weight: ['400', '700'],
+});
 
 export default function About({ }) {
   return (
-    <div className="dark:bg-black bg-white min-h-screen text-center w-full pt-20 px-4 sm:px-10 md:px-20 lg:px-40 m-auto">
+    <div className="bg-black text-white min-h-screen text-center w-full pt-20 px-4 sm:px-10 md:px-20 lg:px-40 m-auto">
     <div className="text-center">
-      <h3 className="uppercase tracking-[20px] text-white text-xl sm:text-2xl md:text-3xl">
-        <b>A</b>bout
-      </h3>
+      <h1 className={`${playfair.className} text-white text-5xl`}>
+        About
+      </h1>
     </div>
   
     <div className="flex flex-col md:flex-row justify-evenly items-center mt-10 text-center md:text-left px-0 md:px-10 mx-auto gap-y-10">
@@ -31,7 +36,7 @@ export default function About({ }) {
           Adaptable student with knowledge of development, configuration management, and database. Aiming to leverage my abilities to successfully fill the vacancy on your team. Frequently praised for communication by my peers, I can be relied upon to help your team achieve its goals.
         </p>
         <Link href="/about">
-        {/* <Button variant={"outline"} size={"lg"}>view more</Button> */}
+        <button className="button bg-white text-black hover:bg-transparent hover:text-white">view more</button>
         </Link>
       </div>
     </div>

@@ -7,6 +7,13 @@ import Script from "next/script";
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Providers from "./providers";
 import ThemeSwitcher from "./ThemeSwitcher";
+import { Poppins, Playfair_Display } from "@next/font/google";
+
+const poppins = Poppins({
+  subsets: ['latin-ext'],
+  weight: ['400', '700'],
+});
+
 
 
 export const metadata = {
@@ -29,7 +36,7 @@ export default function RootLayout({
   return (
     <SizeObserver>
       <ScrollObserver>
-        <html lang="en">
+        <html lang="en" className={poppins.className}>
           <head>
             {/* <!-- Google Tag Manager --> */}
             <Script
@@ -74,7 +81,7 @@ export default function RootLayout({
           <body>
             <Providers>
             <GoogleAnalytics gaId="G-VTDSFE7JPH"/>
-            <ThemeSwitcher />
+            {/* <ThemeSwitcher /> */}
             {children}
             <Analytics/>
             <SpeedInsights />

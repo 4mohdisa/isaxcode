@@ -16,7 +16,7 @@ const Carousel = dynamic(() => import('./carousel'), {
 
 const Testimonials: React.FC = () => {
   return (
-    <Carousel className="dark:bg-black bg-white text-white py-10 lg:py-20">
+    <Carousel className="bg-black text-white text-white py-10 lg:py-20">
       <CarouselItem index={0}>
         <Review by="Aysha">
           Isa&#x27;s work on my Ecommerce henna website was exceptional. He crafted a visually stunning and user-friendly platform, optimizing it for search engines. His professionalism and expertise ensured a smooth and fruitful collaboration. Highly recommended for any web development project!
